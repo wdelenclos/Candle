@@ -1,10 +1,12 @@
-import { Vrouter } from './core/vrouter/router.js';
-
+import { Vrouter } from './core/vrouter/router';
+import { App } from './app/components/App';
 // configuration
 Vrouter.config({ mode: 'history'});
 
 // returning the user to the initial state
 Vrouter.navigate();
+
+App.init();
 
 // adding routes
 Vrouter
