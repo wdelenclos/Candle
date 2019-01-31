@@ -1,20 +1,16 @@
-import { Vdom } from './core/vdom/vdom.js';
+import { Candle } from '../../core/core.js';
 
-const root = document.getElementById('app');
+import { Content } from './Content.js';
+import { Nav } from './Nav.js';
 
-const el = Vdom.el(
-    'ul',
-    null,
-    this.el(
-        'li',
-        null,
-        'item 1'
-    ),
-    this.el(
-        'li',
-        null,
-        'hello!'
-    )
-);
-
-Vdom.updateElement(root, el);
+export const App = Candle.create('nav', {
+    attrs: {
+        "id": 'appContainer',
+        "class": "container",
+        "candle": "container",
+    },
+    children: [
+        Nav,
+        Content
+    ],
+});

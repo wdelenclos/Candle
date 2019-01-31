@@ -1,17 +1,32 @@
-import { Vrouter } from './core/vrouter/router.js';
+import { Candle } from './core/core.js'
+import { App } from './app/components/App.js';
+
+// Add services
+Candle.services();
+
 
 // configuration
-Vrouter.config({ mode: 'history'});
+Candle.router.config({ mode: 'history'});
 
-
+// returning the user to the initial state
+Candle.router.navigate();
 // adding routes
-Vrouter.add(/home/, function() {
-        console.log('collection');
+Candle.router
+    .add(/dashboard/, function() {
+        console.log('⚓ Dashboard');
+    })
+    .add(/products\/(.*)\/edit\/(.*)/, function() {
+        console.log('products', arguments);
+    })
+    .add(function() {
+        Vrouter.navigate('/dashboard');
     });
 
+
+
 // forwarding
-Vrouter.navigate('/home');
+Candle.router.navigate('/dashboard');
+let content = Candle.render(App);
+Candle.mount(content, document.getElementById('app'));
 
-
-const $root = document.getElementById('root');
 

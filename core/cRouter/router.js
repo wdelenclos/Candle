@@ -1,5 +1,4 @@
-
-export var Vrouter = {
+export default {
     routes: [],
     mode: null,
     root: '/',
