@@ -1,4 +1,4 @@
-export function debug(obj, label){
+export default (obj, label) => {
     switch (label) {
         case 'warn':
             return console.log('⚠️ | ' + obj);
