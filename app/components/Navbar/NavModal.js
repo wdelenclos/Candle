@@ -21,7 +21,7 @@ export const NavModal = Candle.create('div', {
                         "Configuration active"
                     ]
                 }),
-                Candle.create('p', {
+                Candle.create('pre', {
                     children: [
                         JSON.stringify(config, null, 4)
                     ]
