@@ -4,8 +4,9 @@
 export var config = {
   // MODES : string ( dev || prod )
   mode: "dev",
+  container: "app",
  // Services : [array]
-  services: ["firebase", "style"]
+  services: ["firebase", "scripts"]
 };
 
 
