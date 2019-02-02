@@ -20,7 +20,8 @@ export const NavBarLeft = Candle.create('div', {
             children: [
                 Candle.create('img', {
                     attrs: {
-                        "src": "https://www.smapps.app/storage/Logo.png",
+                        "src": "/assets/img/logo.svg",
+                        "width" : "105px"
                     }
                 }),
             ]
