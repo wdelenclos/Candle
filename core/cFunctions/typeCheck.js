@@ -1,4 +1,5 @@
 
+
 export function typeCheck(data, conf) {
     for (let key of Object.keys(conf)) {
         switch (key) {

@@ -2,6 +2,7 @@
 / Candle JS Module
 / - Export index with init method
 */
+
 document.firebaseInit = function (){
     // Initialize Firebase
     var config = {
@@ -66,3 +67,4 @@ document.firebaseInit = function (){
 export const init = function(){
 
 };
+

@@ -8,11 +8,13 @@ const getModules = function(callback) {
         debug('Inject ' + element, 'dev');
         const module = '../../services/' + element + '/index.js';
         import(module).then(function (service) {
+
             services.push(service.init);
             callback();
         }).catch(error => {
             debug('Failed to inject the module: ' + element,"err");
             debug('--> '+error, "err")
+
         });
     });
 };
@@ -27,6 +29,7 @@ const inject = function() {
             s.innerHTML += services[i];
             s.innerHTML +=   '; Cndl'+ i +'();';
             document.getElementsByTagName('head')[0].appendChild(s);
+
         }
     });
 

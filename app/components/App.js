@@ -8,6 +8,7 @@ import { Nav } from './Navbar/Nav.js';
 export const App = Candle.create('div', {
     attrs: {
         "id": 'appContainer',
+
         "candle": "container",
     },
     children: [

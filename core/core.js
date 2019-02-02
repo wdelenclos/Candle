@@ -11,6 +11,7 @@ import cFunctions from './cFunctions/index.js';
 
 
 export var Candle = {
+
     render : cRender,
     mount: cMount,
     create: cCreate,
@@ -18,3 +19,4 @@ export var Candle = {
     services: cFunctions.injectScript,
     functions: cFunctions
 };
+

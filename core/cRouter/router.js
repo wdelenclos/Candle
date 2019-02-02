@@ -29,3 +29,4 @@ export default class cRouter {
         Candle.mount(document.content, document.getElementById(config.container));
     }
 }
+
