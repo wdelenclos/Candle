@@ -1,5 +1,6 @@
 import { Candle } from '../../../core/core.js';
 import { NavBarLeft } from './NavBarLeft.js';
+import { NavBarRight } from './NavBarRight.js';
 
 export const Nav = Candle.create('nav', {
     attrs: {
@@ -13,7 +14,8 @@ export const Nav = Candle.create('nav', {
                 "class": "uk-container uk-container-expand",
             },
             children: [
-                NavBarLeft
+                NavBarLeft,
+                NavBarRight
             ]
         }),
     ],
