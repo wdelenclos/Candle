@@ -1,6 +1,7 @@
 import { Candle } from '../../../core/core.js';
 import { config } from '../../../core/config/config.js'
 
+
 export const NavModal = Candle.create('div', {
     attrs: {
         "uk-modal" : "",
@@ -22,7 +23,7 @@ export const NavModal = Candle.create('div', {
                 }),
                 Candle.create('p', {
                     children: [
-                        JSON.stringify(config, undefined, 2)
+                        JSON.stringify(config, null, 4)
                     ]
                 }),
             ],
