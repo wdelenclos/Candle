@@ -1,11 +1,10 @@
-import { Candle } from '../../core/core.js';
+import { Candle } from '../../../core/core.js';
 
 
 export const Content = Candle.create('container', {
     attrs: {
-        "id": 'appContainer',
-        "class": "container",
-        "candle": "container",
+        "id": 'appContent',
+        "candle": "content",
     },
     children: [
         Candle.create('nav', {

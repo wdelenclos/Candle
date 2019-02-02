@@ -1,12 +1,13 @@
+// ---- Firebase Admin dashboard
+
 import { Candle } from '../../core/core.js';
 
-import { Content } from './Content.js';
-import { Nav } from './Nav.js';
+import { Content } from './dashboard/Content.js';
+import { Nav } from './Navbar/Nav.js';
 
-export const App = Candle.create('nav', {
+export const App = Candle.create('div', {
     attrs: {
         "id": 'appContainer',
-        "class": "container",
         "candle": "container",
     },
     children: [
