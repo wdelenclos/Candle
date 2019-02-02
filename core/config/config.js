@@ -5,6 +5,14 @@ export var config = {
     // MODES : string ( dev || prod )
     mode: "dev",
     container: "app",
+    base:{
+        apiKey: "",
+        authDomain: "",
+        databaseURL:"",
+        projectId:"",
+        storageBucket:"",
+        messagingSenderId: ""
+    },
     // Services : [array]
     services: ["scripts"],
     data: [
