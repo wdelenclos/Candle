@@ -6,12 +6,12 @@ export var config = {
   mode: "dev",
   container: "app",
  // Services : [array]
-  services: ["firebase", "scripts"]
+  services: ["scripts"]
 };
 
 
 
-/* Chaque service correspond à un fichier JS dans cServices
+/* Chaque service correspond à un fichier JS dans services
 pour injecter des logiques disponibles dans les composants
 disponible via
 */
