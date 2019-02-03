@@ -1,6 +1,6 @@
 /*
 / Candle JS Module
-/ - Export index with init method
+/ - Export with init method
 */
 
 

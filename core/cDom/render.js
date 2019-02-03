@@ -1,3 +1,4 @@
+import { Candle } from '../core.js';
 import debug from '../cFunctions/debug.js';
 
 const render = (vNode) => {
@@ -12,7 +13,7 @@ const render = (vNode) => {
     return renderElem(vNode);
 };
 
-const renderElem =  function ({tagName, attrs, children}) {
+const renderElem =  function ({tagName, attrs, children, event}) {
     // create the element
     //   e.g. <div></div>
     const $el = document.createElement(tagName);
@@ -27,6 +28,10 @@ const renderElem =  function ({tagName, attrs, children}) {
     //   e.g. <div id="app"><img></div>
     for (const child of children) {
         $el.appendChild(render(child));
+    }
+    if(event !== {}){
+        console.log(event);
+        Candle.dom.addEvent($el, event.trigger, event.action);
     }
 
     return $el;
