@@ -25,8 +25,8 @@ export default class cRouter {
         if (history && navPath) {
             history.pushState(null, null, navPath);
         }
-        document.content =  Candle.render(node);
-        Candle.mount(document.content, document.getElementById(config.container));
+        document.content =  Candle.dom.renderEl(node);
+        Candle.dom.mountEl(document.content, document.getElementById(config.container));
     }
 }
 
