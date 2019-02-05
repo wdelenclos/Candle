@@ -1,6 +1,6 @@
 /*
 / Candle JS Module
-/ - Export index with init method
+/ - Export with init method
 */
 
 
@@ -9,10 +9,6 @@ export const init = function(){
         {
             type: "stylesheet",
             uri: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
-        },
-        {
-            type: "script",
-            uri: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"
         },
         {
             type: "script",

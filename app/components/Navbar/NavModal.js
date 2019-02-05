@@ -1,19 +1,18 @@
 import { Candle } from '../../../core/core.js';
 import { config } from '../../../core/config/config.js'
 
-
-export const NavModal = Candle.create('div', {
+export const NavModal = Candle.dom.createEl('div', {
     attrs: {
         "uk-modal" : "",
         "id": "modal-example"
     },
     children: [
-        Candle.create('div', {
+        Candle.dom.createEl('div', {
             attrs: {
                 "class": "uk-modal-dialog uk-modal-body",
             },
             children: [
-                Candle.create('h2', {
+                Candle.dom.createEl('h2', {
                     attrs: {
                         "class": "uk-modal-title",
                     },
@@ -21,7 +20,7 @@ export const NavModal = Candle.create('div', {
                         "Configuration active"
                     ]
                 }),
-                Candle.create('pre', {
+                Candle.dom.createEl('pre', {
                     children: [
                         JSON.stringify(config, null, 4)
                     ]

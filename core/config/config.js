@@ -13,14 +13,16 @@ export var config = {
         storageBucket:"",
         messagingSenderId: ""
     },
-    // Services : [array]
     services: ["scripts"],
     data: [
         {
-            document: "Users"
+            collection: "users",
+            displayName: "Utilisateurs"
         },
-        {},
-        {},
+        {
+            collection: "coachs",
+            displayName: "Coachs"
+        },
     ]
 };
 
