@@ -12,10 +12,6 @@ export const init = function(){
         },
         {
             type: "script",
-            uri: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"
-        },
-        {
-            type: "script",
             uri: "https://www.gstatic.com/firebasejs/5.2.0/firebase.js"
         }
     ];

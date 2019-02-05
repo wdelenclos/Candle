@@ -29,8 +29,7 @@ const renderElem =  function ({tagName, attrs, children, event}) {
     for (const child of children) {
         $el.appendChild(render(child));
     }
-    if(event !== {}){
-        console.log(event);
+    if(typeof event === 'object' && Object.keys(event).length){
         Candle.dom.addEvent($el, event.trigger, event.action);
     }
 
