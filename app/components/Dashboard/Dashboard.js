@@ -1,17 +1,31 @@
-import { Candle } from '../../../core/core.js';
+import {Candle} from '../../../core/core.js';
 
-
-export const Dashboard = Candle.dom.createEl('container', {
+import { DashBoardCollections } from './DashBoardCollections.js'
+export const Dashboard = Candle.dom.createEl('div', {
     attrs: {
         "id": 'appContent',
-        "candle": "content",
+        "class": "container",
+        "style": "padding: 24px",
     },
     children: [
-        Candle.dom.createEl('nav', {
-            attrs: {
-                "class": "flex items-center justify-between flex-wrap bg-teal p-6",
-                "candle": "nav",
-            },
-        }),
+        Candle.dom.createEl('h4',
+            {
+                attrs: {
+                    'style': 'margin: 24px 0'
+                },
+                children: [
+                    "Vos Collections"
+                ]
+            }
+        ),
+        Candle.dom.createEl('div',
+            {
+                attrs: {
+                    'class': 'columns'
+                },
+                children: DashBoardCollections
+            }
+        )
     ],
 });
+

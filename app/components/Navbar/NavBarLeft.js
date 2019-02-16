@@ -1,30 +1,16 @@
-import { Candle } from '../../../core/core.js';
+import {Candle} from '../../../core/core.js';
 
 
-export const NavBarLeft = Candle.dom.createEl('div', {
+export const NavBarLeft = Candle.dom.createEl('section', {
     attrs: {
-        "class": "uk-navbar-left",
+        "class": "navbar-section",
     },
     children: [
-        Candle.dom.createEl('a', {
+        Candle.dom.createEl('img', {
             attrs: {
-                "id": "sidebar_toggle",
-                "class": "uk-navbar-toggle",
-                "uk-navbar-toggle-icon": true
+                "src": "/assets/img/logo.svg",
+                "width": "105px"
             }
-        }),
-        Candle.dom.createEl('a', {
-            attrs: {
-                "class": "uk-navbar-item uk-logo",
-            },
-            children: [
-                Candle.dom.createEl('img', {
-                    attrs: {
-                        "src": "/assets/img/logo.svg",
-                        "width" : "105px"
-                    }
-                }),
-            ]
-        }),
+        })
     ],
 });

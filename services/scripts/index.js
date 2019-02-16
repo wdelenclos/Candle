@@ -8,7 +8,7 @@ export const init = function(){
     const dependencies = [
         {
             type: "stylesheet",
-            uri: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+            uri: "https://unpkg.com/spectre.css/dist/spectre.min.css"
         },
         {
             type: "script",
@@ -19,6 +19,7 @@ export const init = function(){
         if(element.type === "script"){
             let s = document.createElement('script');
             s.type = 'text/javascript';
+            s.async = 'true';
             s.src = element.uri;
             document.getElementsByTagName('head')[0].appendChild(s);
 

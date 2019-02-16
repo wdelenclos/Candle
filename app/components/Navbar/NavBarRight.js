@@ -4,23 +4,14 @@ import { NavModal } from "./NavModal.js";
 import CollectionAction from "../../actions/Navbar/collectionAction.js";
 import HomeAction from "../../actions/Navbar/homeAction.js";
 
-export const NavBarRight = Candle.dom.createEl('div', {
+export const NavBarRight = Candle.dom.createEl('section', {
     attrs: {
-        "class": "uk-navbar-right uk-light",
+        "class": "navbar-section",
     },
     children: [
-        Candle.dom.createEl('ul', {
-            attrs: {
-                "class": "uk-navbar-nav",
-            },
-            children: [
-                Candle.dom.createEl('li', {
-                    attrs: {
-                        "class": "uk-active",
-                    },
-                    children: [
                         Candle.dom.createEl('a', {
                             attrs: {
+                                "class" : "btn btn-link",
                                 "style": "color: #222; display: inline;"
                             },
                             children: [
@@ -33,6 +24,7 @@ export const NavBarRight = Candle.dom.createEl('div', {
                         }),
                         Candle.dom.createEl('a', {
                             attrs: {
+                                "class" : "btn btn-link",
                                 "style": "color: #222; display: inline;"
                             },
                             children: [
@@ -45,9 +37,9 @@ export const NavBarRight = Candle.dom.createEl('div', {
                         }),
                         Candle.dom.createEl('a', {
                             attrs: {
-                                "uk-toggle": "",
-                                "href": "#modal-example",
-                                "class": "uk-active",
+                                "href": "#config",
+                                "class": "btn btn-link",
+                                "aria-label": "Open",
                                 "style": "color: #222; display: inline;"
                             },
                             children: [
@@ -55,9 +47,7 @@ export const NavBarRight = Candle.dom.createEl('div', {
                             ]
                         }),
                         NavModal
-                    ],
-                }),
-            ],
-        }),
+
+
     ],
 });
