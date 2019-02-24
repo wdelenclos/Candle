@@ -22,18 +22,38 @@ const data = [{
 }];
 
 
-var collectionArray = [];
+var trArray = [];
+
+function renderTd(el, type){
+    let tdArr = [];
+    if(type === "head"){
+        for (var property in el) {
+            tdArr.push(
+                Candle.dom.createEl('td', {
+                    children: [property]
+                })
+            )
+        }
+    }
+    else if (type === "body"){
+        for (var property in el) {
+            let val = JSON.stringify(el[property]);
+            tdArr.push(
+                Candle.dom.createEl('td', {
+                    children: [val]
+                })
+            )
+        }
+    }
+
+    return tdArr;
+}
 
 data.forEach(function (el) {
-    collectionArray.push(
+    trArray.push(
         Candle.dom.createEl('tr',
             {
-
-                children: [Candle.dom.createEl('td',
-                    {
-                        children: [el.type]
-                    })]
-
+                        children: renderTd(el, 'body')
 
             }));
 
@@ -45,7 +65,7 @@ const tables = Candle.dom.createEl('table', {
     },
     children: [
         Candle.dom.createEl('tbody', {
-                children: collectionArray
+                children: trArray
             }
         )
     ]
