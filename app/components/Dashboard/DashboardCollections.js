@@ -1,21 +1,22 @@
 import {Candle} from '../../../core/core.js';
 
-import {getCollections, getCollectionLength} from "../../../core/cData/data.js";
+import {getCollectionLength, getCollections} from "../../../core/cData/data.js";
+import CollectionsCardAction from "../../actions/Collections/CollectionsCardAction.js";
 
 
 var data = getCollections();
 
 
+var content = [];
 
-var content = new Array();
-
-data.forEach(function(el){
-    console.log(el);
+data.forEach(function (el) {
     content.push(
         Candle.dom.createEl('div',
             {
                 attrs: {
-                    'class': 'column col-4 col-xs-12'
+                    'class': 'column col-4 col-xs-12',
+                    'style': 'cursor:pointer',
+                    'data-collection':el.collection
                 },
                 children: [
                     Candle.dom.createEl('div', {
@@ -70,9 +71,13 @@ data.forEach(function(el){
                         ]
                     })
                 ]
-            }
-        )
-    );
+                , event: {
+                    trigger: "click",
+                    action: CollectionsCardAction
+                }
+
+            }));
+
 });
 
 export const DashBoardCollections = content;

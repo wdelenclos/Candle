@@ -12,5 +12,6 @@ if(typeCheck(config, 'Object') && config.mode == 'dev'){
 
 Candle.services();
 Candle.data;
-Candle.router.navigate('/dashboard' , 'Dashboard', Home);
+Candle.router.navigate('/dashboard' , 'Content', Home);
+
 

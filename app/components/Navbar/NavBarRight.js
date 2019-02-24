@@ -15,7 +15,7 @@ export const NavBarRight = Candle.dom.createEl('section', {
                                 "style": "color: #222; display: inline;"
                             },
                             children: [
-                                "Dashboard",
+                                "Content",
                             ],
                             event: {
                                 trigger: "click",

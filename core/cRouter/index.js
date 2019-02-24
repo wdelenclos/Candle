@@ -1,7 +1,7 @@
 import { Candle } from '/core/core.js'
 import { config } from '/core/config/config.js'
 
-const TITLE_DEFAULT = "Dashboard";
+const TITLE_DEFAULT = "Content";
 
 function sanitizePath(path) {
     return path.toString().replace(/\/$/, '').replace(/^\//, '');
