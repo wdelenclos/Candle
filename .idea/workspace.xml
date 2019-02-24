@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cc07655-9d16-4852-90e7-931e248b575b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/Detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/actions/Navbar/homeAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/Navbar/homeAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Collection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Collection/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Collection/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Dashboard/DashboardCollections.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Dashboard/DashboardCollections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Navbar/NavBarRight.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Navbar/NavBarRight.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/cRouter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/cRouter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Collection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Collection/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Collection/CollectionArray.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            <state relative-caret-position="75">
+              <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -51,20 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/Collection/Content.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/components/Collection/CollectionArray.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="475">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/components/Collection.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/Detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="90">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
               <folding>
                 <element signature="e#34#78#0" expanded="true" />
               </folding>
@@ -100,6 +96,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/Collection/Collection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/core.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -119,18 +127,6 @@
               <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/cFunctions/injectScripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,13 +195,15 @@
         <option value="$PROJECT_DIR$/app/actions/Navbar/updateAction.js" />
         <option value="$PROJECT_DIR$/app/components/Dashboard/DashboardCollections.js" />
         <option value="$PROJECT_DIR$/init.js" />
-        <option value="$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js" />
         <option value="$PROJECT_DIR$/core/cFunctions/getContext.js" />
         <option value="$PROJECT_DIR$/core/core.js" />
         <option value="$PROJECT_DIR$/core/cFunctions/index.js" />
         <option value="$PROJECT_DIR$/core/cData/data.js" />
         <option value="$PROJECT_DIR$/app/components/Collection/Content.js" />
         <option value="$PROJECT_DIR$/app/components/Collection.js" />
+        <option value="$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js" />
+        <option value="$PROJECT_DIR$/app/components/Collection/Collection.js" />
+        <option value="$PROJECT_DIR$/app/components/Collection/CollectionArray.js" />
       </list>
     </option>
   </component>
@@ -322,11 +320,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/Collection" />
       <recent name="$PROJECT_DIR$/core/cFunctions" />
       <recent name="$PROJECT_DIR$/core/cDom" />
       <recent name="$PROJECT_DIR$/app/components/Dashboard" />
       <recent name="$PROJECT_DIR$/app/components/Navbar" />
-      <recent name="$PROJECT_DIR$/app/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/components/layouts" />
@@ -359,12 +357,12 @@
       <workItem from="1549443048197" duration="250000" />
       <workItem from="1550129112112" duration="12364000" />
       <workItem from="1550341108906" duration="441000" />
-      <workItem from="1551004762135" duration="5397000" />
+      <workItem from="1551004762135" duration="7710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42214000" />
+    <option name="totallyTimeSpent" value="44527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -639,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/cData/data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -653,20 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Collection/Content.js">
+    <entry file="file://$PROJECT_DIR$/app/components/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -677,13 +658,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Collection.js">
+    <entry file="file://$PROJECT_DIR$/app/components/Detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="90">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="e#34#78#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Collection/Collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/actions/Collections/CollectionsCardAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Collection/CollectionArray.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
