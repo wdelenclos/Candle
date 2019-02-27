@@ -6,7 +6,7 @@ const render = (vNode) => {
     if (vNode.attr && vNode.attr.candle) {
         debug('Rendering ' + vNode.attrs.candle, 'dev');
     }
-    if (typeCheck(vNode, 'String')) {
+    if (typeCheck(vNode, 'string')) {
         return document.createTextNode(vNode);
     }
 
@@ -30,6 +30,7 @@ const renderElem = function ({tagName, attrs, children, event}) {
     for (const child of children) {
         $el.appendChild(render(child));
     }
+    console.log(typeof event);
     if (typeCheck(event, 'object') && Object.keys(event).length) {
         Candle.dom.addEvent($el, event.trigger, event.action);
     }
