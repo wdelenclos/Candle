@@ -11,6 +11,10 @@ export const init = function(){
             uri: "https://unpkg.com/spectre.css/dist/spectre.min.css"
         },
         {
+            type: "stylesheet",
+            uri: "https://cdn.bootcss.com/spectre.css/0.5.8/spectre-icons.min.css"
+        },
+        {
             type: "script",
             uri: "https://www.gstatic.com/firebasejs/5.2.0/firebase.js"
         }
