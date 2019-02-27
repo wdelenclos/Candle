@@ -4,7 +4,7 @@ import debug from '../cFunctions/debug.js';
 const render = (vNode) => {
     if(vNode.attr && vNode.attr.candle){
         debug('Rendering '+ vNode.attrs.candle, 'dev');
-    }
+    }//
     if (typeof vNode === 'string') {
         return document.createTextNode(vNode);
     }
