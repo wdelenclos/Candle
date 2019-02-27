@@ -23,6 +23,7 @@ const data = [{
 
 
 var trArray = [];
+var thArray = [];
 
 function renderTd(el, type){
     let tdArr = [];
@@ -58,11 +59,24 @@ data.forEach(function (el) {
 
 });
 
+    thArray.push(
+        Candle.dom.createEl('tr',
+            {
+                children: renderTd(data[0], 'head')
+
+            }));
+
+
+
 const tables = Candle.dom.createEl('table', {
     attrs: {
         'class': 'table'
     },
     children: [
+        Candle.dom.createEl('thead', {
+                children: thArray
+            }
+        ),
         Candle.dom.createEl('tbody', {
                 children: trArray
             }
