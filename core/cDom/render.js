@@ -1,6 +1,5 @@
 import {Candle} from '../core.js';
 import debug from '../cFunctions/debug.js';
-import {typeCheck} from '../cFunctions/typeCheck.js';
 
 const render = (vNode) => {
     if (vNode.attr && vNode.attr.candle) {
