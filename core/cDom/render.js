@@ -1,10 +1,10 @@
-import {Candle} from '../core.js';
+import { Candle } from '../core.js';
 import debug from '../cFunctions/debug.js';
 
 const render = (vNode) => {
-    if (vNode.attr && vNode.attr.candle) {
-        debug('Rendering ' + vNode.attrs.candle, 'dev');
-    }
+    if(vNode.attr && vNode.attr.candle){
+        debug('Rendering '+ vNode.attrs.candle, 'dev');
+    }//
     if (typeof vNode === 'string') {
         return document.createTextNode(vNode);
     }
@@ -13,7 +13,7 @@ const render = (vNode) => {
     return renderElem(vNode);
 };
 
-const renderElem = function ({tagName, attrs, children, event}) {
+const renderElem =  function ({tagName, attrs, children, event}) {
     // create the element
     //   e.g. <div></div>
     const $el = document.createElement(tagName);
@@ -29,11 +29,11 @@ const renderElem = function ({tagName, attrs, children, event}) {
     for (const child of children) {
         $el.appendChild(render(child));
     }
-    if (typeof event === 'object' && Object.keys(event).length) {
+    if(typeof event === 'object' && Object.keys(event).length){
         Candle.dom.addEvent($el, event.trigger, event.action);
     }
 
     return $el;
 };
 
-export {render as default}
+export {render as default }
