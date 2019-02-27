@@ -19,28 +19,31 @@ const data = [{
     name: "Érables",
     zone: "europe"
 }];
-var array=[];
-array.push(
-    Candle.dom.createEl('label', {
-        attrs: {
-            "class": "form-checkbox",
-        },
-        children: [
-            Candle.dom.createEl('input', {
+var array = [];
+for (var property in data[0]) {
+    array.push(
+        Candle.dom.createEl('label', {
                 attrs: {
-                    "type": "checkbox",
-                }, children: [
+                    "class": "form-checkbox",
+                },
+                children: [
+                    Candle.dom.createEl('input', {
+                        attrs: {
+                            "type": "checkbox",
+                            "checked":""
+                        }
+                    }),
                     Candle.dom.createEl('i', {
                         attrs: {
                             "class": "form-icon"
                         }
-                    }), "label"
+                    }), property
+
                 ]
-            })
-
-        ]
-    }));
-
+            }
+        ))
+}
+console.log(array);
 export const CollectionModal = Candle.dom.createEl('div', {
     attrs: {
         "class": "modal",
