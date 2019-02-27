@@ -5,7 +5,7 @@ import {getConfig} from '../config/config.js'
 export default class cData {
     constructor() {
         var self = this;
-        document.onreadystatechange = function(){
+        document.onreadystatechange = function () {
             const config = getConfig().base;
             firebase.initializeApp(config);
             self.db = firebase.firestore();
@@ -26,6 +26,7 @@ export default class cData {
             self.initDocs();
         };
     }
+
     getDoc(name, callback) {
         const result = [];
         this.db.collection(name).get()
@@ -33,17 +34,18 @@ export default class cData {
                 snapshot.forEach(doc => {
                     result.push(doc.data());
                 });
-               callback(result);
+                callback(result);
             })
             .catch(err => {
                 console.log('Error getting documents', err);
             });
     }
-    initDocs(){
+
+    initDocs() {
         const self = this;
         getConfig().data.forEach(function (el) {
-            self.getDoc(el.collection, function(data){
-                window.localStorage.setItem("CandleData_" + el.collection, JSON.stringify(data) );
+            self.getDoc(el.collection, function (data) {
+                window.localStorage.setItem("CandleData_" + el.collection, JSON.stringify(data));
             });
         });
     }

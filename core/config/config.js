@@ -7,7 +7,7 @@ export var config = {
     // MODES : string ( dev || prod )
     mode: "dev",
     container: "app",
-    base:{
+    base: {
         apiKey: "AIzaSyAEeD5MoO9b37qNKFweoG4bYzUwJGUiOgs",
         authDomain: "fir-7c2a1.firebaseapp.com",
         databaseURL: "https://fir-7c2a1.firebaseio.com",
@@ -38,18 +38,18 @@ disponible via
 */
 
 
-export function getConfig(){
-    if(typeCheck(window.localStorage.getItem('CandleConfig'), 'String') && (window.localStorage.getItem('CandleConfig') === JSON.stringify(config))){
-            return JSON.parse(window.localStorage.getItem('CandleConfig'));
+export function getConfig() {
+    if (typeCheck(window.localStorage.getItem('CandleConfig'), 'String') && (window.localStorage.getItem('CandleConfig') === JSON.stringify(config))) {
+        return JSON.parse(window.localStorage.getItem('CandleConfig'));
     }
-    else{
+    else {
         setConfig();
         return JSON.parse(window.localStorage.getItem('CandleConfig'));
     }
 }
 
-export function setConfig(){
+export function setConfig() {
     window.localStorage.setItem('CandleConfig', JSON.stringify(config));
-    debug('Configuration set in local storage','dev');
+    debug('Configuration set in local storage', 'dev');
     return true;
 }

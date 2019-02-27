@@ -3,9 +3,9 @@ export default (obj, label) => {
         case 'warn':
             return console.log('⚠️ | ' + obj);
         case 'err':
-            return console.log('⛔ | '+ obj);
+            return console.log('⛔ | ' + obj);
         case 'dev':
-            return console.log('ℹ️ | '+ obj);
+            return console.log('ℹ️ | ' + obj);
         default:
             return console.log(obj)
     }

@@ -15,7 +15,24 @@ export const Collection = Candle.dom.createEl('div', {
                     'style': 'margin: 24px 0'
                 },
                 children: [
-                    "Details de la collection"
+                    Candle.dom.createEl('a',
+                        {
+                            attrs: {
+                                'href' : '/'
+                             },
+                            children: [
+                                Candle.dom.createEl('button',
+                                    {
+                                        attrs:{
+                                            'class': 'btn btn-primary'
+                                        },
+                                        children:[
+                                            'Retour'
+                                        ]
+                                    })
+                            ]
+                        }),
+                    "   Details de la collection"
                 ]
             }
         ),

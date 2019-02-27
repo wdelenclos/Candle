@@ -1,17 +1,18 @@
-import { Candle } from './core/core.js'
-import { Home } from './app/components/Home.js';
+import {Candle} from './core/core.js'
+import {Home} from './app/components/Home.js';
 
-import { getConfig } from './core/config/config.js'
-import { typeCheck } from './core/cFunctions/typeCheck.js'
+import {getConfig} from './core/config/config.js'
+import {typeCheck} from './core/cFunctions/typeCheck.js'
 
 const config = getConfig();
 
-if(typeCheck(config, 'Object') && config.mode == 'dev'){
+if (typeCheck(config, 'Object') && config.mode == 'dev') {
     console.log(config);
-};
+}
+;
 
 Candle.services();
 Candle.data;
-Candle.router.navigate('/dashboard' , 'Content', Home);
+Candle.router.navigate('/dashboard', 'Content', Home);
 
 

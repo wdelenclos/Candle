@@ -3,10 +3,10 @@
 // version: 1.0
 
 
-import  cDom from './cDom/index.js';
-import  cFunctions from './cFunctions/index.js';
-import  cRouter  from './cRouter/index.js';
-import  cData from './cData/index.js';
+import cDom from './cDom/index.js';
+import cFunctions from './cFunctions/index.js';
+import cRouter from './cRouter/index.js';
+import cData from './cData/index.js';
 
 
 export var Candle = {

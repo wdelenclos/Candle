@@ -1,5 +1,5 @@
 function primitiveTypeCheck(data, type) {
-    switch(typeof data) {
+    switch (typeof data) {
         case "number":
         case "string":
         case "boolean":
@@ -7,7 +7,7 @@ function primitiveTypeCheck(data, type) {
         case "function":
             return type === typeof data;
         case "object":
-            switch(type) {
+            switch (type) {
                 case "null":
                     return data === null;
                 case "array":
@@ -35,7 +35,7 @@ function complexTypeCheck(data, conf) {
                     valid = complexTypeCheck(data, {value});
                     if (valid) break;
                 }
-                if(!valid) return false;
+                if (!valid) return false;
         }
     }
 
@@ -43,23 +43,23 @@ function complexTypeCheck(data, conf) {
 }
 
 export function typeCheck(data, conf) {
-        for (var key of Object.keys(conf)) {
-            switch (key) {
-                case 'type':
-                case 'value':
-                case 'enum':
-                    var newConf = {};
-                    newConf[key] = conf[key];
-                    if (!complexTypeCheck(data, newConf)) return false;
-                    break;
-                case 'properties':
-                    for (let prop of Object.keys(conf[key])) {
-                        if (data[prop] === undefined) return false;
-                        if (!typeCheck(data[prop], conf[key][prop])) return false;
-                    }
-                    break;
-            }
+    for (var key of Object.keys(conf)) {
+        switch (key) {
+            case 'type':
+            case 'value':
+            case 'enum':
+                var newConf = {};
+                newConf[key] = conf[key];
+                if (!complexTypeCheck(data, newConf)) return false;
+                break;
+            case 'properties':
+                for (let prop of Object.keys(conf[key])) {
+                    if (data[prop] === undefined) return false;
+                    if (!typeCheck(data[prop], conf[key][prop])) return false;
+                }
+                break;
         }
-        return true;
+    }
+    return true;
 }
 

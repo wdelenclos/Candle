@@ -1,12 +1,11 @@
 import {Candle} from '../core.js';
 import debug from '../cFunctions/debug.js';
-import {typeCheck} from '../cFunctions/typeCheck.js';
 
 const render = (vNode) => {
     if (vNode.attr && vNode.attr.candle) {
         debug('Rendering ' + vNode.attrs.candle, 'dev');
     }
-    if (typeCheck(vNode, 'string')) {
+    if (typeof vNode === 'string') {
         return document.createTextNode(vNode);
     }
 
@@ -30,8 +29,7 @@ const renderElem = function ({tagName, attrs, children, event}) {
     for (const child of children) {
         $el.appendChild(render(child));
     }
-    console.log(typeof event);
-    if (typeCheck(event, 'object') && Object.keys(event).length) {
+    if (typeof event === 'object' && Object.keys(event).length) {
         Candle.dom.addEvent($el, event.trigger, event.action);
     }
 

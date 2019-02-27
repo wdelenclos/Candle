@@ -1,5 +1,5 @@
-import { Candle } from '/core/core.js'
-import { config } from '/core/config/config.js'
+import {Candle} from '/core/core.js'
+import {config} from '/core/config/config.js'
 
 const TITLE_DEFAULT = "Content";
 
