@@ -55,7 +55,6 @@ data.forEach(function (el) {
         Candle.dom.createEl('tr',
             {
                         children: renderTd(el, 'body')
-
             }));
 
 });
