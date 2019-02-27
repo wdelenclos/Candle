@@ -1,6 +1,7 @@
 import {Candle} from '../../../core/core.js';
 
-import { CollectionArray } from './CollectionArray.js'
+import {CollectionArray} from './CollectionArray.js'
+import {CollectionModal} from "./CollectionModal.js";
 
 export const Collection = Candle.dom.createEl('div', {
     attrs: {
@@ -15,7 +16,18 @@ export const Collection = Candle.dom.createEl('div', {
                     'style': 'margin: 24px 0'
                 },
                 children: [
-                    "Details de la collection"
+                    "Details de la collection",
+                    Candle.dom.createEl('a', {
+                        attrs: {
+                            "href": "#filter",
+                            "class": "btn btn-link",
+                            "aria-label": "Open",
+                            "style": "color: #222; display: inline;"
+                        },
+                        children: [
+                            "Filtrer",
+                        ]
+                    }),CollectionModal
                 ]
             }
         ),
