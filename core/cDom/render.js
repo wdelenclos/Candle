@@ -1,33 +1,34 @@
 import { Candle } from '../core.js';
 import debug from '../cFunctions/debug.js';
 
+/**
+ * Render Node
+ * @param vNode
+ * @returns {Node}
+ */
 const render = (vNode) => {
     if(vNode.attr && vNode.attr.candle){
         debug('Rendering '+ vNode.attrs.candle, 'dev');
-    }//
+    }
     if (typeof vNode === 'string') {
         return document.createTextNode(vNode);
     }
-
-    // we assume everything else to be a virtual element
     return renderElem(vNode);
 };
-
+/**
+ *  Render element
+ * @param tagName
+ * @param attrs
+ * @param children
+ * @param event
+ * @returns {HTMLElement}
+ */
 const renderElem =  function ({tagName, attrs, children, event}) {
-    // create the element
-    //   e.g. <div></div>
-    const el = document.createElement(tagName);
 
-    debug("Render "+ tagName, 'dev');
-    console.log(attrs);
-    // add all attributs as specified in vNode.attrs
-    //   e.g. <div id="app"></div>
+    const el = document.createElement(tagName);
     for (const [k, v] of Object.entries(attrs)) {
         el.setAttribute(k, v);
     }
-
-    // append all children as specified in vNode.children
-    //   e.g. <div id="app"><img></div>
     for (const child of children) {
         el.appendChild(render(child));
     }

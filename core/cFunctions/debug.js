@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param obj
+ * @param label
+ */
 export default (obj, label) => {
     switch (label) {
         case 'warn':

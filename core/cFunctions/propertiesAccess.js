@@ -1,3 +1,9 @@
+/**
+ *
+ * @param object
+ * @param path
+ * @returns {*}
+ */
 export default (object, path) => {
     object = object || {};
     if (!path) return object;

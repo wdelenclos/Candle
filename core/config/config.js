@@ -3,6 +3,10 @@
 import debug from '../cFunctions/debug.js';
 import {typeCheck} from '../cFunctions/typeCheck.js';
 
+/**
+ * Configuration object
+ * @type {{mode: string, container: string, base: {apiKey: string, authDomain: string, databaseURL: string, projectId: string, storageBucket: string, messagingSenderId: string, timestampsInSnapshots: boolean}, services: string[], data: *[]}}
+ */
 export var config = {
     // MODES : string ( dev || prod )
     mode: "dev",
@@ -32,12 +36,10 @@ export var config = {
 };
 
 
-/* Chaque service correspond à un fichier JS dans services
-pour injecter des logiques disponibles dans les composants
-disponible via
-*/
-
-
+/**
+ *  Get local stored configuration
+ * @returns {any}
+ */
 export function getConfig() {
     if (typeCheck(window.localStorage.getItem('CandleConfig'), 'String') && (window.localStorage.getItem('CandleConfig') === JSON.stringify(config))) {
         return JSON.parse(window.localStorage.getItem('CandleConfig'));
@@ -48,6 +50,11 @@ export function getConfig() {
     }
 }
 
+
+/**
+ *  Set local stored configuration
+ * @returns {boolean}
+ */
 export function setConfig() {
     window.localStorage.setItem('CandleConfig', JSON.stringify(config));
     debug('Configuration set in local storage', 'dev');

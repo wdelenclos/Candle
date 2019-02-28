@@ -2,7 +2,10 @@ import debug from '../cFunctions/debug.js';
 import {config} from '../config/config.js';
 
 var services = [];
-
+/**
+ *
+ * @param callback
+ */
 const getModules = function (callback) {
     config.services.forEach(function (element) {
         debug('Inject ' + element, 'dev');

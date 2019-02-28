@@ -1,9 +1,10 @@
-// ---- Firebase Admin dashboard
+// ---- Candle Admin dashboard
 
 import { Candle } from '../../core/core.js';
 
 import { Dashboard } from './Dashboard/Dashboard.js';
 import { Nav } from './Navbar/Nav.js';
+import { Notification } from './Notification.js';
 
 export const Home = Candle.dom.createEl('div', {
     attrs: {
@@ -12,6 +13,7 @@ export const Home = Candle.dom.createEl('div', {
     },
     children: [
         Nav,
-        Dashboard
+        Dashboard,
+        Notification
     ],
 });

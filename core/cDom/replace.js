@@ -1,5 +1,11 @@
 import debug  from '../cFunctions/debug.js';
 
+/**
+ * Replace Dom
+ * @param node
+ * @param target
+ * @returns {*}
+ */
 export default (node, target) => {
     if(target === null ){
         debug('Target of rendering is empty', 'err');

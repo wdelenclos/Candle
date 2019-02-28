@@ -3,7 +3,9 @@
 / - Export with init method
 */
 
-
+/**
+ *  Init function script
+ */
 export const init = function(){
     const dependencies = [
         {

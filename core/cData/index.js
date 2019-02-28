@@ -3,6 +3,9 @@
 import {getConfig} from '../config/config.js'
 
 export default class cData {
+    /**
+     *
+     */
     constructor() {
         var self = this;
         document.onreadystatechange = function () {
@@ -27,6 +30,11 @@ export default class cData {
         };
     }
 
+    /**
+     *
+     * @param name
+     * @param callback
+     */
     getDoc(name, callback) {
         const result = [];
         this.db.collection(name).get()
@@ -41,6 +49,9 @@ export default class cData {
             });
     }
 
+    /**
+     *
+     */
     initDocs() {
         var esSetItem = localStorage.setItem;
 

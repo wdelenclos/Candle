@@ -5,7 +5,6 @@ import replace from './replace.js'
 import update from './update.js'
 import render from './render.js'
 
-
 export default  {
     createEl: create,
     updateEl: update,

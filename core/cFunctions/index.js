@@ -3,7 +3,9 @@ import propertiesAccess from './propertiesAccess.js';
 import {inject} from './injectScripts.js';
 import {typeCheck} from './typeCheck.js';
 
-
+/**
+ * 
+ */
 export default {
     debug: debug,
     propertiesAccess: propertiesAccess,

@@ -2,6 +2,9 @@ import {Candle} from '../../../core/core.js';
 
 import {CollectionArray} from './CollectionArray.js'
 import {CollectionModal} from "./CollectionModal.js";
+import homeAction from "../../actions/Navbar/homeAction.js";
+
+
 
 export const Collection = Candle.dom.createEl('div', {
     attrs: {
@@ -18,15 +21,12 @@ export const Collection = Candle.dom.createEl('div', {
                 children: [
                     Candle.dom.createEl('a',
                         {
-                            attrs: {
-                                'href' : '/'
-                             },
                             children: [
                                 Candle.dom.createEl('button',
                                     {
                                         attrs:{
                                             'class': 'btn',
-                                            'style' : "    color: #f5a623; border-color: #f5a623; margin-right: 8px"
+                                            'style' : "color: #f5a623; border-color: #f5a623; margin-right: 24px"
                                         },
                                         children:[
                                             Candle.dom.createEl('i',{
@@ -36,18 +36,29 @@ export const Collection = Candle.dom.createEl('div', {
                                             })
                                         ]
                                     })
-                            ]
+                            ],
+                            event: {
+                                trigger: 'click',
+                                action: homeAction
+                            }
                         }),
-                    "   Details de la collection"
+                    "Details de la collection"
                 ]
             }
         ),
         Candle.dom.createEl('div',
             {
                 attrs: {
-                    'class': 'columns'
+                    'class': 'columns',
+                    'id' : "content"
                 },
-                children: [CollectionArray]
+                children: [
+                    Candle.dom.createEl('div',{
+                        attrs:{
+                            'class' : "loading loading-lg p-centered",
+                        }
+                    })
+                ]
             }
         )
     ],
