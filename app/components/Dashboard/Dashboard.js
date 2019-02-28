@@ -1,6 +1,8 @@
 import {Candle} from '../../../core/core.js';
 
 import { DashBoardCollections } from './DashBoardCollections.js'
+import { DashBoardDb } from './DashBoardDb.js'
+
 export const Dashboard = Candle.dom.createEl('div', {
     attrs: {
         "id": 'appContent',
@@ -14,7 +16,25 @@ export const Dashboard = Candle.dom.createEl('div', {
                     'style': 'margin: 24px 0'
                 },
                 children: [
-                    "Vos Collections"
+                    "Database"
+                ]
+            }
+        ),
+        Candle.dom.createEl('div',
+            {
+                attrs: {
+                    'class': 'columns'
+                },
+                children: DashBoardDb
+            }
+        ),
+        Candle.dom.createEl('h4',
+            {
+                attrs: {
+                    'style': 'margin: 48px 0 32px'
+                },
+                children: [
+                    "Collections list"
                 ]
             }
         ),

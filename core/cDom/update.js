@@ -1,6 +1,5 @@
 /**
  * Update dom
- * 
  * @param tagName
  * @param attrs
  * @param children

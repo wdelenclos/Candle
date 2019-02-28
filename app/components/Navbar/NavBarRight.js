@@ -3,6 +3,7 @@ import { NavModal } from "./NavModal.js";
 
 import UpdateAction from "../../actions/Navbar/updateAction.js";
 import HomeAction from "../../actions/Navbar/homeAction.js";
+import CollectionAction from "../../actions/Navbar/collectionAction.js";
 
 export const NavBarRight = Candle.dom.createEl('section', {
     attrs: {
@@ -15,11 +16,24 @@ export const NavBarRight = Candle.dom.createEl('section', {
                                 "style": "color: #222; display: inline;"
                             },
                             children: [
-                                "Collections",
+                                "Dashboard",
                             ],
                             event: {
                                 trigger: "click",
                                     action: HomeAction
+                            }
+                        }),
+                        Candle.dom.createEl('a', {
+                            attrs: {
+                                "class" : "btn btn-link",
+                                "style": "color: #222; display: inline;"
+                            },
+                            children: [
+                                "Collections",
+                            ],
+                            event: {
+                                trigger: "click",
+                                action: CollectionAction
                             }
                         }),
                         Candle.dom.createEl('a', {
@@ -37,7 +51,7 @@ export const NavBarRight = Candle.dom.createEl('section', {
                         Candle.dom.createEl('button', {
                             attrs: {
                                 "class" : "btn btn-sm",
-                                "style": "color: #f5a623; border-color: #f5a623;"
+                                "style": "color: #f5a623; border-color: #f5a623; margin-left: 16px"
                             },
                             children: [
                                 "Update data"

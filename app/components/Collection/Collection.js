@@ -1,7 +1,6 @@
 import {Candle} from '../../../core/core.js';
 
-import {CollectionArray} from './CollectionArray.js'
-import {CollectionModal} from "./CollectionModal.js";
+
 import homeAction from "../../actions/Navbar/homeAction.js";
 
 

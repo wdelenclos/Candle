@@ -66,6 +66,28 @@ export const NavModal = Candle.dom.createEl('div', {
                                     children:[
                                         JSON.stringify(config, null, 4)
                                     ]
+                                }),
+                                Candle.dom.createEl('div', {
+                                    attrs:{
+"class" : "divider text-center",
+                                        "data-content" : "Need to edit ?"
+                                    },
+                                }),
+                                Candle.dom.createEl('p', {
+                                    attrs:{
+                                        "class" : "text-justify"
+                                    },
+                                    children:[
+                                        "Edit the configuration in : ",
+                                        Candle.dom.createEl('code', {
+                                            attrs:{
+                                                "class" : "text-justify"
+                                            },
+                                            children:[
+                                                "/core/config/config.js"
+                                            ]
+                                        })
+                                    ]
                                 })
                             ]
                         })
