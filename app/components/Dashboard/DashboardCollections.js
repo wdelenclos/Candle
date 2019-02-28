@@ -10,6 +10,7 @@ var data = getCollections();
 var content = [];
 
 data.forEach(function (el) {
+    console.log(el);
     content.push(
         Candle.dom.createEl('div',
             {

@@ -42,6 +42,14 @@ export default class cData {
     }
 
     initDocs() {
+        var esSetItem = localStorage.setItem;
+
+        localStorage.setItem = function() {
+            var event = new Event('dataStored');
+            document.dispatchEvent(event);
+            esSetItem.apply(this, arguments);
+        };
+
         const self = this;
         getConfig().data.forEach(function (el) {
             self.getDoc(el.collection, function (data) {

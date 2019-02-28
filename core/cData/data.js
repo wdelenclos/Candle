@@ -1,6 +1,7 @@
 // Gestion des collections
 
 import {getConfig} from '../config/config.js'
+import {Candle} from "../core.js";
 
 export function getData(collection) {
     if (window.localStorage.getItem("CandleData_" + collection) !== null) {
@@ -17,10 +18,11 @@ export function getCollections() {
     return collections.data;
 }
 
-export function resetCollections() {
+export function resetCollections(callback) {
     let collections = getConfig();
     collections.data.forEach(function (el) {
         window.localStorage.removeItem("CandleData_" + el.collection);
+        callback();
     });
     return true
 }

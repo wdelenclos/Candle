@@ -25,10 +25,15 @@ export const Collection = Candle.dom.createEl('div', {
                                 Candle.dom.createEl('button',
                                     {
                                         attrs:{
-                                            'class': 'btn btn-primary'
+                                            'class': 'btn',
+                                            'style' : "    color: #f5a623; border-color: #f5a623; margin-right: 8px"
                                         },
                                         children:[
-                                            'Retour'
+                                            Candle.dom.createEl('i',{
+                                                attrs: {
+                                                    'class': 'icon icon-arrow-left'
+                                                }
+                                            })
                                         ]
                                     })
                             ]

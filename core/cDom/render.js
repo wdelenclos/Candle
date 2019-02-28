@@ -16,24 +16,26 @@ const render = (vNode) => {
 const renderElem =  function ({tagName, attrs, children, event}) {
     // create the element
     //   e.g. <div></div>
-    const $el = document.createElement(tagName);
+    const el = document.createElement(tagName);
 
+    debug("Render "+ tagName, 'dev');
+    console.log(attrs);
     // add all attributs as specified in vNode.attrs
     //   e.g. <div id="app"></div>
     for (const [k, v] of Object.entries(attrs)) {
-        $el.setAttribute(k, v);
+        el.setAttribute(k, v);
     }
 
     // append all children as specified in vNode.children
     //   e.g. <div id="app"><img></div>
     for (const child of children) {
-        $el.appendChild(render(child));
+        el.appendChild(render(child));
     }
     if(typeof event === 'object' && Object.keys(event).length){
-        Candle.dom.addEvent($el, event.trigger, event.action);
+        Candle.dom.addEvent(el, event.trigger, event.action);
     }
 
-    return $el;
+    return el;
 };
 
 export {render as default }
