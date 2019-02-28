@@ -12,7 +12,7 @@ export const init = function(){
         },
         {
             type: "stylesheet",
-            uri: "https://cdn.bootcss.com/spectre.css/0.5.8/spectre-icons.min.css"
+            uri: "https://raw.githubusercontent.com/picturepan2/icons.css/master/dist/icons.min.css"
         },
         {
             type: "script",
