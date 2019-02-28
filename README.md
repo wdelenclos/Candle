@@ -1,7 +1,7 @@
 ![Logo](https://raw.githubusercontent.com/wdelenclos/FirebaseWebAdmin/master/assets/img/logo.png)
 
 # Candle 
-A simple Firebase web admin. View collections, personnalise the dispay, export data, with a light pure JS WebApp.
+A simple Firebase web admin. View collections, personnalise the display, export data, with a light pure JS WebApp.
 
 
 ## Configuration
