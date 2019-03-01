@@ -40,17 +40,7 @@ export var CollectionsContent = Candle.dom.createEl('div', {
                                 action: homeAction
                             }
                         }),
-                    "Details de la collection"
-                ]
-            }
-        ),
-        Candle.dom.createEl('h4',
-            {
-                attrs: {
-                    'style': 'margin: 48px 0 32px'
-                },
-                children: [
-                    "Collection list"
+                    "All collections"
                 ]
             }
         ),
