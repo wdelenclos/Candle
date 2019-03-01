@@ -34,7 +34,7 @@ export var Dashboard = Candle.dom.createEl('div', {
                     'style': 'margin: 48px 0 32px'
                 },
                 children: [
-                    "CollectionsContent list"
+                    "Collections"
                 ]
             }
         ),
