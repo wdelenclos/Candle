@@ -1,3 +1,11 @@
+import {Candle} from '../core.js'
+/**
+ * Primitive type check
+ * Conf example: {'type' : 'string'}
+ * @param data
+ * @param type
+ * @returns {*}
+ */
 function primitiveTypeCheck(data, type) {
     switch (typeof data) {
         case "number":
@@ -13,18 +21,27 @@ function primitiveTypeCheck(data, type) {
                 case "array":
                     return Array.isArray(data);
                 default:
-                    return data !== null && !Array.isArray(data);
+                    return type === typeof data && data !== null && !Array.isArray(data);
             }
-
+        default:
+            Candle.functions.debug(conf[key] + " is not a valid type", 'warn');
+            return false;
     }
-    return false;
 }
 
-function complexTypeCheck(data, conf) {
+/**
+ *
+ * @param data
+ * @param conf
+ * @returns {boolean}
+ */
+function routerTypeCheck(data, conf) {
     for (var key of Object.keys(conf)) {
         switch (key) {
             case 'type':
-                if (!primitiveTypeCheck(data, conf[key])) return false;
+                if (!primitiveTypeCheck(data, conf[key])){
+                    return false;
+                }
                 break;
             case 'value':
                 if (JSON.stringify(data) !== JSON.stringify(conf[key])) return false;
@@ -32,17 +49,23 @@ function complexTypeCheck(data, conf) {
             case 'enum':
                 var valid = false;
                 for (var value of conf[key]) {
-                    valid = complexTypeCheck(data, {value});
+                    valid = routerTypeCheck(data, {value});
                     if (valid) break;
                 }
                 if (!valid) return false;
         }
     }
-
     return true;
 }
 
-export function typeCheck(data, conf) {
+
+/**
+ *  Type checker function
+ * @param data
+ * @param conf
+ * @returns {boolean}
+ */
+export function type(data, conf) {
     for (var key of Object.keys(conf)) {
         switch (key) {
             case 'type':
@@ -50,7 +73,7 @@ export function typeCheck(data, conf) {
             case 'enum':
                 var newConf = {};
                 newConf[key] = conf[key];
-                if (!complexTypeCheck(data, newConf)) return false;
+                if (!routerTypeCheck(data, newConf)) return false;
                 break;
             case 'properties':
                 for (let prop of Object.keys(conf[key])) {
@@ -58,6 +81,9 @@ export function typeCheck(data, conf) {
                     if (!typeCheck(data[prop], conf[key][prop])) return false;
                 }
                 break;
+            default:
+                Candle.functions.debug(key + " is not a valid attributes", 'warn');
+                return false;
         }
     }
     return true;
