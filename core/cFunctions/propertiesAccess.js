@@ -1,5 +1,5 @@
 /**
- *
+ * Function prop access
  * @param object
  * @param path
  * @returns {*}

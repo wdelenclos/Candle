@@ -3,16 +3,20 @@ import {Home} from './app/components/Home.js';
 
 /**
  *
- *  "Less is more."
- *
- *   - Candle
+ *   🕯️ Candle
  *
  **/
 
- document.Candle = Candle;
+/**
+ * Services injections
+ */
 Candle.services();
+
+/**
+ * Data fetch
+ */
 Candle.data;
 
-Candle.router.navigate('/dashboard', 'CollectionsContent | Candle', Home);
+Candle.router.navigate('/dashboard', 'Dashboard | Candle', Home);
 
 

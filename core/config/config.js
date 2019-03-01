@@ -1,4 +1,4 @@
-// Candle.js configuration file
+// 🕯️ Candle.js configuration file
 
 import debug from '../cFunctions/debug.js';
 import {type} from '../cFunctions/typeCheck.js';
