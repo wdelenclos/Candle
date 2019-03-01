@@ -8,7 +8,7 @@ export const NavBarLeft = Candle.dom.createEl('section', {
     children: [
         Candle.dom.createEl('img', {
             attrs: {
-                "src": "/assets/img/logo.svg",
+                "src": "/assets/img/logo.png",
                 "width": "105px"
             }
         })
