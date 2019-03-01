@@ -13,6 +13,6 @@ import {Home} from './app/components/Home.js';
 Candle.services();
 Candle.data;
 
-Candle.router.navigate('/dashboard', 'Dashboard | Candle', Home);
+Candle.router.navigate('/dashboard', 'CollectionsContent | Candle', Home);
 
 

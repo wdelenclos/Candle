@@ -1,4 +1,4 @@
-// ---- Dashboard
+// ---- CollectionsContent
 
 import {Candle} from '../../core/core.js';
 import NotificationAction from '../actions/NotificationAction.js';

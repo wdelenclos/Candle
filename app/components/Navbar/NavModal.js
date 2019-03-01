@@ -1,7 +1,7 @@
 import {Candle} from '../../../core/core.js';
 import {config} from '../../../core/config/config.js'
 
-export const NavModal = Candle.dom.createEl('div', {
+export var NavModal = Candle.dom.createEl('div', {
     attrs: {
         "class": "modal",
         "id": "config",

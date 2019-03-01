@@ -24,7 +24,6 @@ const render = (vNode) => {
  * @returns {HTMLElement}
  */
 const renderElem =  function ({tagName, attrs, children, event}) {
-
     const el = document.createElement(tagName);
     for (const [k, v] of Object.entries(attrs)) {
         el.setAttribute(k, v);
