@@ -5,7 +5,7 @@ import UpdateAction from "../../actions/Navbar/updateAction.js";
 import HomeAction from "../../actions/Navbar/homeAction.js";
 import CollectionAction from "../../actions/Navbar/collectionAction.js";
 
-export const NavBarRight = Candle.dom.createEl('section', {
+export var NavBarRight = Candle.dom.createEl('section', {
     attrs: {
         "class": "navbar-section",
     },

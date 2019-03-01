@@ -2,7 +2,7 @@ import { Candle } from '../../../core/core.js';
 import { NavBarLeft } from './NavBarLeft.js';
 import { NavBarRight } from './NavBarRight.js';
 
-export const Nav = Candle.dom.createEl('header', {
+export var Nav = Candle.dom.createEl('header', {
     attrs: {
         "class": "navbar",
         "candle": "nav",

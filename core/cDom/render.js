@@ -7,13 +7,14 @@ import debug from '../cFunctions/debug.js';
  * @returns {Node}
  */
 const render = (vNode) => {
-    if(vNode.attr && vNode.attr.candle){
-        debug('Rendering '+ vNode.attrs.candle, 'dev');
-    }
-    if (typeof vNode === 'string') {
-        return document.createTextNode(vNode);
-    }
-    return renderElem(vNode);
+
+        if(vNode.attr && vNode.attr.candle){
+            debug('Rendering '+ vNode.attrs.candle, 'dev');
+        }
+        if (typeof vNode === 'string') {
+            return document.createTextNode(vNode);
+        }
+        return renderElem(vNode);
 };
 /**
  *  Render element
@@ -24,7 +25,6 @@ const render = (vNode) => {
  * @returns {HTMLElement}
  */
 const renderElem =  function ({tagName, attrs, children, event}) {
-
     const el = document.createElement(tagName);
     for (const [k, v] of Object.entries(attrs)) {
         el.setAttribute(k, v);

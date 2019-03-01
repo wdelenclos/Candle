@@ -1,7 +1,7 @@
 import {Candle} from '../../../core/core.js';
 
 
-export const NavBarLeft = Candle.dom.createEl('section', {
+export var NavBarLeft = Candle.dom.createEl('section', {
     attrs: {
         "class": "navbar-section",
     },

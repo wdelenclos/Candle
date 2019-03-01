@@ -1,11 +1,10 @@
 import {Candle} from '../../../core/core.js';
 
-
+import { CollectionsList } from './CollectionsList.js'
 import homeAction from "../../actions/Navbar/homeAction.js";
 
 
-
-export var Collection = Candle.dom.createEl('div', {
+export var CollectionsContent = Candle.dom.createEl('div', {
     attrs: {
         "id": 'appContent',
         "class": "container",
@@ -45,19 +44,22 @@ export var Collection = Candle.dom.createEl('div', {
                 ]
             }
         ),
+        Candle.dom.createEl('h4',
+            {
+                attrs: {
+                    'style': 'margin: 48px 0 32px'
+                },
+                children: [
+                    "Collection list"
+                ]
+            }
+        ),
         Candle.dom.createEl('div',
             {
                 attrs: {
-                    'class': 'columns',
-                    'id' : "content"
+                    'class': 'columns'
                 },
-                children: [
-                    Candle.dom.createEl('div',{
-                        attrs:{
-                            'class' : "loading loading-lg p-centered",
-                        }
-                    })
-                ]
+                children: CollectionsList
             }
         )
     ],
