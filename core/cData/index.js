@@ -1,6 +1,7 @@
 // Gestion des collections
 
 import {getConfig} from '../config/config.js'
+import {Candle} from '../core.js'
 
 export default class cData {
     /**
@@ -36,17 +37,19 @@ export default class cData {
      * @param callback
      */
     getDoc(name, callback) {
-        const result = [];
-        this.db.collection(name).get()
-            .then(snapshot => {
-                snapshot.forEach(doc => {
-                    result.push(doc.data());
+        if (Candle.functions.type(name, {'type': 'string'}) && Candle.functions.type(callback, {'type': 'function'})) {
+            const result = [];
+            this.db.collection(name).get()
+                .then(snapshot => {
+                    snapshot.forEach(doc => {
+                        result.push(doc.data());
+                    });
+                    callback(result);
+                })
+                .catch(err => {
+                    console.log('Error getting documents', err);
                 });
-                callback(result);
-            })
-            .catch(err => {
-                console.log('Error getting documents', err);
-            });
+        }
     }
 
     /**

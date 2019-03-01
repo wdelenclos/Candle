@@ -16,6 +16,9 @@ export function getData(collection) {
             return false;
         }
     }
+    else{
+        Candle.functions.debug('Wrong collection type','warn')
+    }
 
 }
 
@@ -34,12 +37,17 @@ export function getCollections() {
  * @returns {boolean}
  */
 export function resetCollections(callback) {
-    let collections = getConfig();
-    collections.data.forEach(function (el) {
-        window.localStorage.removeItem("CandleData_" + el.collection);
-        callback();
-    });
-    return true
+    if(Candle.functions.type(callback,{'type':'function'})) {
+        let collections = getConfig();
+        collections.data.forEach(function (el) {
+            window.localStorage.removeItem("CandleData_" + el.collection);
+            callback();
+        });
+        return true
+    }
+    else{
+        Candle.functions.debug('Wrong callback type','warn')
+    }
 }
 
 /**
@@ -54,6 +62,9 @@ export function getCollectionLength(collection) {
         } else {
             return false;
         }
+    }
+    else{
+        Candle.functions.debug('Wrong collection type','warn')
     }
 }
 
