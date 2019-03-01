@@ -1,7 +1,7 @@
 // Candle.js configuration file
 
 import debug from '../cFunctions/debug.js';
-import {typeCheck} from '../cFunctions/typeCheck.js';
+import {type} from '../cFunctions/typeCheck.js';
 
 /**
  * Configuration object
@@ -41,7 +41,7 @@ export var config = {
  * @returns {any}
  */
 export function getConfig() {
-    if (typeCheck(window.localStorage.getItem('CandleConfig'), 'String') && (window.localStorage.getItem('CandleConfig') === JSON.stringify(config))) {
+    if (type(window.localStorage.getItem('CandleConfig'), {'type' : 'string'}) && (window.localStorage.getItem('CandleConfig') === JSON.stringify(config))) {
         return JSON.parse(window.localStorage.getItem('CandleConfig'));
     }
     else {

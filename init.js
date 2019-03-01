@@ -9,6 +9,7 @@ import {Home} from './app/components/Home.js';
  *
  **/
 
+ document.Candle = Candle;
 Candle.services();
 Candle.data;
 

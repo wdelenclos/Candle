@@ -9,11 +9,12 @@ import {Candle} from "../core.js";
  * @returns {*}
  */
 export function getData(collection) {
-    if (window.localStorage.getItem("CandleData_" + collection) !== null) {
-        return JSON.parse(window.localStorage.getItem("CandleData_" + collection));
-    }
-    else {
-        return false;
+    if (Candle.functions.type(collection,{'type':'string'})){
+        if (window.localStorage.getItem("CandleData_" + collection) !== null) {
+            return JSON.parse(window.localStorage.getItem("CandleData_" + collection));
+        } else {
+            return false;
+        }
     }
 
 }
@@ -47,11 +48,12 @@ export function resetCollections(callback) {
  * @returns {*}
  */
 export function getCollectionLength(collection) {
-    if (window.localStorage.getItem("CandleData_" + collection) !== null) {
-        return JSON.stringify(JSON.parse(window.localStorage.getItem("CandleData_" + collection)).length);
-    }
-    else {
-        return false;
+    if (Candle.functions.type(collection,{'type':'string'})) {
+        if (window.localStorage.getItem("CandleData_" + collection) !== null) {
+            return JSON.stringify(JSON.parse(window.localStorage.getItem("CandleData_" + collection)).length);
+        } else {
+            return false;
+        }
     }
 }
 
