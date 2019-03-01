@@ -1,5 +1,5 @@
 import { Candle } from '../core.js';
-import debug from '../cFunctions/debug.js';
+
 
 /**
  * Render Node
@@ -7,14 +7,13 @@ import debug from '../cFunctions/debug.js';
  * @returns {Node}
  */
 const render = (vNode) => {
-
-        if(vNode.attr && vNode.attr.candle){
-            debug('Rendering '+ vNode.attrs.candle, 'dev');
-        }
-        if (typeof vNode === 'string') {
-            return document.createTextNode(vNode);
-        }
-        return renderElem(vNode);
+    if(vNode.attr && vNode.attr.candle){
+        Candle.functions.debug('Rendering '+ vNode.attrs.candle, 'dev');
+    }
+    if (Candle.functions.type(vNode, {'type':'string'})) {
+        return document.createTextNode(vNode);
+    }
+    return renderElem(vNode);
 };
 /**
  *  Render element
@@ -32,7 +31,7 @@ const renderElem =  function ({tagName, attrs, children, event}) {
     for (const child of children) {
         el.appendChild(render(child));
     }
-    if(typeof event === 'object' && Object.keys(event).length){
+    if(Candle.functions.type(event, {'type':'object'}) && Object.keys(event).length){
         Candle.dom.addEvent(el, event.trigger, event.action);
     }
 
