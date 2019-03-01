@@ -16,3 +16,4 @@ displayName: the dispay document name.
 
 ## Extend you Candle JS
 
+You can add function and action into Candle object or simply add services in "service" folder.
